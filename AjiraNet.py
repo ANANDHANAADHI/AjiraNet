@@ -1,5 +1,5 @@
 from collections import defaultdict as dd
-d_s = dd(int)
+d_s = {'A1' :5 ,'A2':5,'A3':5,'A4':5,'A5':5}
 l_c = []
 l_r = []
 c_s = dict()
@@ -66,17 +66,17 @@ while(True):
                     else:
                         a = findstn(t[1],t[2])
                         b = list(map(str,a.split()))
-                        if len(b) <= d_s[t[1]]:
+                        if len(b) <= d_s[t[1]]+2:
                             print(*b,sep = '->')
                         else:
                             print('length not enough')
                 elif t[1][0] == 'R':
                     if t[1] not in l_r or t[2] not in l_r:
-                        print(findstn(t[1],t[2]))
+                        print('Node not found')
                     else:
                         a = findstn(t[1],t[2])
                         b = list(map(str,a.split()))
-                        if len(b) <= d_s[t[1]]:
+                        if len(b) <= d_s[t[1]]+2:
                             print(*b,sep = '->')
                         else:
                             print('length not enough')
