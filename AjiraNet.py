@@ -50,6 +50,7 @@ while(True):
                     c_s[t[1]] = l
                     # print(c_s)
                     print('Successfully connected')
+                    print(c_s)
                 else:
                     print('Devices are already connected')
             else:
